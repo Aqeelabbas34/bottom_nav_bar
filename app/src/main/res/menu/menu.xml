@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <item
     android:title="Home"
     android:icon="@drawable/baseline_home_24"
-    android:iconTint="@color/black"
+
+
     />
     <item
         android:title="Search"
         android:icon="@drawable/baseline_search_24"
-        android:iconTint="@color/black"/>
-    <item
-        android:title=" "/>
+       />
+  <item
+      android:title="@null"
+      />
+
     <item
         android:title="Setting"
         android:icon="@drawable/baseline_settings_24"
-        android:iconTint="@color/black"
+
         />
     <item
         android:title="Profile"
         android:icon="@drawable/baseline_person_24"
-        android:iconTint="@color/black"
+
         />
 </menu>
