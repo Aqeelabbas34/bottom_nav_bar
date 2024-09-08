@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,61 +9,56 @@
     android:background="#BC7EF4"
     android:orientation="vertical"
     tools:context=".MainActivity">
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-    <RelativeLayout
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="bottom"
-        />
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:id="@+id/bottom_app_bar"
-        app:fabAlignmentMode="center"
-        app:fabCradleMargin="15dp"
-        app:fabCradleVerticalOffset="10dp"
-        app:fabCradleRoundedCornerRadius="60dp"
-        app:fabAnchorMode="cradle"
-        app:backgroundTint="@color/white"
-        app:removeEmbeddedFabElevation="true"
-        app:elevation="0dp"
         >
-        <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        <!-- Your content above the BottomAppBar -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:itemIconSize="28dp"
-            android:layout_marginEnd="15dp"
-            android:background="@android:color/transparent"
-            app:labelVisibilityMode="labeled"
-            app:itemIconTint="@color/black"
-            app:itemTextColor="@color/black"
-            app:menu="@menu/menu"
-            app:itemActiveIndicatorStyle="@null"
-            app:itemBackground="@android:color/transparent"
+            android:layout_gravity="bottom"
+            app:backgroundTint="@color/white"
+            app:fabAlignmentMode="center"
+            app:fabAnchorMode="cradle"
+            app:fabCradleMargin="15dp"
+            app:fabCradleRoundedCornerRadius="50dp"
+            app:fabCradleVerticalOffset="10dp">
 
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@android:color/transparent"
+                app:itemActiveIndicatorStyle="@null"
+                app:itemBackground="@android:color/transparent"
+                app:itemIconSize="28dp"
+                app:itemIconTint="@color/black"
+                app:itemTextColor="@color/black"
+                app:labelVisibilityMode="selected"
+                app:menu="@menu/menu" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
 
-            />
-
-    </com.google.android.material.bottomappbar.BottomAppBar>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/baseline_add_24"
-        android:tint="@color/black"
-        app:shapeAppearanceOverlay="@style/fab_3_rounded"
-        android:contentDescription="@string/app_name"
-        app:layout_anchor="@id/bottom_app_bar"
-        app:backgroundTint="@color/white"
-
-        >
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
-
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/baseline_add_24"
+            android:tint="@color/black"
+            app:backgroundTint="@color/white"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:shapeAppearanceOverlay="@style/fab_3_rounded" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </LinearLayout>
