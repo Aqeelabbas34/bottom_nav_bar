@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         >
 
-        <!-- Your content above the BottomAppBar -->
+        <!-- Your content over the BottomAppBar -->
 
         <RelativeLayout
             android:layout_width="match_parent"
